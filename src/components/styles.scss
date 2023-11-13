@@ -1,0 +1,144 @@
+$title-text: 'Righteous', sans-serif;
+$read-text: 'Poppins', sans-serif;
+
+
+$primary-color: #190482;
+$secondary-color: #7752FE;
+$accent-color: #8E8FFA;
+$neutral-color: #C2D9FF;
+$hero-image:'./assets/Portrait.jpg';
+$first-gradient: url('../assets/stacked-waves.png');
+// $second-gradient : url('../assets/stacked-waves-haikei.png');
+// $second-gradient : url('../assets//layered-steps-haikei.png');
+// $first-gradient: linear-gradient(to bottom, $primary-color 50%, $secondary-color 100%), url('../assets/square2.png');
+$second-gradient: linear-gradient(to bottom, $secondary-color 25%, $accent-color 100%);
+$third-gradient: linear-gradient(to bottom, $accent-color 25%, $neutral-color 100%);
+// $gradient: linear-gradient(to right, $secondary-color, rgba(142, 143, 250, 0.80)), url('../assets/square2.png');
+
+// html {
+//     scroll-behavior: smooth;
+// }
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    // padding-left: 5rem;
+    // padding-right: 5rem;
+    // padding-top: 12rem/* 192px */;
+    // padding-bottom: 12rem/* 192px */;
+    justify-content: space-between;
+    background-image: $first-gradient;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.head-text {
+    font: 100% $title-text;
+    color: $secondary-color;
+}
+
+.head-img {
+    width: 50%;
+    // height: 100%;
+    // left: 2%;
+    // bottom: 25%;
+    // position: relative;
+    // z-index: 1;
+}
+
+.title {
+    font: 100% $title-text;
+    font-size: 5rem;
+    color: $primary-color;
+}
+
+.title-bg {
+    background-color: $neutral-color;
+    position: relative;
+    right: 10%;
+    padding-left: 1em;
+    border-radius: 30px;
+}
+
+.body-text {
+    font: 100% $read-text;
+    // max-width: 50%;
+}
+
+.about {
+    background-image: $second-gradient;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5rem;
+}
+
+.projects {
+    // background-color: $accent-color;
+    background-image: $third-gradient;
+}
+
+.project-img {
+    width: 75%;
+    border-radius: 30px;
+    border-style: inset;
+    border-width: 7px;
+    border-color: $secondary-color;
+}
+
+.project-img:hover {
+    width: 100%;
+    border-style: outset;
+}
+
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.badge {
+    font: 100% $read-text;
+    color: white;
+    border-radius: 30px;
+    background-color: $primary-color;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.skill-box {
+    display: flex;
+    flex-shrink: inherit;
+    align-items: center;
+    border-width: 1px;
+    border-color: white;
+    // border-radius: 10px;
+    // padding: 1em;
+}
+
+.skill-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+
+.steps {
+    background-color: $secondary-color;
+    border-radius: 30px;
+    padding-left: 7.5em;
+    position: relative;
+    right: 20%;
+    left: -5%;
+    // top: 100%;
+    // bottom: 0;
+}
+
+
+
+
