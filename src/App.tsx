@@ -2,8 +2,12 @@ import Header from "./components/Header";
 
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Carousel from "./components/Carousel";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 function App() {
+  const [show, setShow] = useState(true);
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,6 +25,10 @@ function App() {
       <About />
       <Projects />
       {/* <Skills /> */}
+      {/* <AnimatePresence>
+   <Component key="dialog" />
+</AnimatePresence> */}
+<button onClick={() => show ? setShow(false) : setShow(true)}>CHANGE</button>
     </>
   );
 }

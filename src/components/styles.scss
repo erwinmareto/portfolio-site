@@ -128,17 +128,39 @@ $third-gradient: linear-gradient(to bottom, $accent-color 25%, $neutral-color 10
 }
 
 
-.steps {
-    background-color: $secondary-color;
-    border-radius: 30px;
-    padding-left: 7.5em;
-    position: relative;
-    right: 20%;
-    left: -5%;
-    // top: 100%;
-    // bottom: 0;
+.box {
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    background: $neutral-color;
+    z-index: -1;
+    top: 145%;
+    right: 80%
+  }
+
+
+.carousel-img1 {
+    position: absolute;
+    top: 390%;
+    left: 10%;
+    z-index: 1;
 }
-
-
-
+.carousel-img2 {
+    position: absolute;
+    top: 392%;
+    left: 12%;
+    z-index: 1;
+}
+.carousel-img3 {
+    position: absolute;
+    top: 394%;
+    left: 14%;
+    z-index: 1;
+}
+.stopper {
+    position: relative;
+    top: 6%;
+    left: 5%;
+    z-index: 10;
+}
 
