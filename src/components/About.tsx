@@ -7,7 +7,7 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <section className="about" ref={ref}>
+    <section className="about">
       <div className="flex flex-col container">
         <motion.div
           className="title title-bg"
@@ -28,7 +28,7 @@ const About = () => {
             About
           </motion.h1>
         </motion.div>
-        <article className="flex flex-wrap-reverse z-10 md:grid md:grid-cols-2 md:gap-32">
+        <article className="flex flex-wrap-reverse z-10 md:grid md:grid-cols-2 md:gap-32" ref={ref}>
           <motion.div
             className="box absolute"
             viewport={{ once: true, amount: 0.8 }}
