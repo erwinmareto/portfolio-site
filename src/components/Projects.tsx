@@ -9,17 +9,18 @@ const Projects = () => {
       <div className="container">
         <h1 className="title title-bg text-6xl md:text-8xl">Projects</h1>
 
-        <div className="flex flex-col mt-10">
+        <div className="flex flex-col my-10">
           <div className="grid">
-            <img
+            {/* <img
               src={Portrait}
               alt="portrait"
               width={500}
               height={250}
               className="project-img justify-self-center cool-border"
-            />
+            /> */}
+            <Carousel />
           </div>
-          <article className="flex-col text-center m-5">
+          <article className="flex-col text-center">
             <p className="text-5xl mt-10">Lorem ipsum</p>
             <ul className="badge-list">
               <li className="badge">React</li>
@@ -43,7 +44,6 @@ const Projects = () => {
           </div>
           <img src={Portrait} alt="portrait" width={500} height={250} />
         </div>
-        <Carousel />
       </div>
       <Skills />
     </section>

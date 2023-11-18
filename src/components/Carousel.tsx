@@ -4,40 +4,129 @@ import third from "../assets/projects/wihire/third_pic.png";
 import fourth from "../assets/projects/wihire/four_pic.png";
 import "./styles.scss";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 const Carousel = () => {
   const [index, setIndex] = useState(0);
   const images = [first, sec, third, fourth];
+  const classes = [
+    "stopper",
+    "carousel-img-1",
+    "carousel-img-2",
+    "carousel-img-3",
+  ];
   const checkIndex = (number: number) => {
-    if (number === images.length) {
+    if (number === images.length || number < 0) {
       return 0;
     }
     if (number < images.length) {
+      console.log(index);
+      
       return number;
     }
     return number - images.length;
   };
+
+  const variants = {
+    move: {
+      x: 0,
+      y: 0,
+    },
+    hidden: {opacity: 0},
+    visible: {opacity: 1}
+  };
+  const moveOne = {
+    move: {
+      x: -10,
+      y: -10,
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+      },
+    },
+  };
+  const moveTwo = {
+    move: {
+      x: -20,
+      y: -20,
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+      },
+    },
+  };
+  const moveThree = {
+    move: {
+      x: -30,
+      y: -30,
+      opacity: 1,
+      transition: {
+        type: 'easeIn'
+      },
+    },
+  };
   return (
-    <div className="container my-20">
-      <img src={images[index]} width={500} className="stopper" />
-      <img
-        src={images[checkIndex(index + 3)]}
+    <motion.div
+      className=" flex justify-center"
+      variants={variants}
+      animate="move"
+      onClick={() => setIndex((index) => checkIndex((index += 1)))}
+
+    >
+      {/* <button onClick={() => setIndex((index) => checkIndex((index -= 1)))}>BACK</button> */}
+      <AnimatePresence>
+        { index <= 0 && (
+          <motion.img
+            src={first}
+            width={500}
+            className={classes[index]}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{ x: -300, opacity: 0 }}
+          />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {(index <= 1) && (
+          <motion.img
+            src={sec}
+            width={500}
+            className={`${classes.at(index - 1)} ${index === 0 && 'relative right-0'}`}
+            variants={moveOne}
+            initial={{opacity: 0}}
+            exit={{ x: -300, opacity: 0 }}
+          />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+      { (index <= 2) && <motion.img
+        src={third}
         width={500}
-        className="carousel-img1"
-      />
-      <img
-        src={images[checkIndex(index + 2)]}
+        className={`${classes.at(index - 2)} ${index === 1 && 'relative right-0'}`}
+        variants={moveTwo}
+        initial={{opacity: 0}}
+        exit={{ x: -300, opacity: 0 }}
+      />}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {(index >= 2) && 
+      <motion.img
+        src={fourth}
         width={500}
-        className="carousel-img2"
+        className={`${classes.at(index - 3)} ${'relative right-0'}`}
+        variants={moveThree}
+        initial={{opacity: 0}}
+        animate='move'
+        exit={{ x: -300, opacity: 0}}
       />
-      <img
-        src={images[checkIndex(index + 1)]}
-        width={500}
-        className="carousel-img3"
-      />
-      <button onClick={() => setIndex((index) => checkIndex((index += 1)))}>
+        }
+      </AnimatePresence>
+      {/* <button onClick={() => setIndex((index) => checkIndex((index += 1)))}>
         CLICK
-      </button>
-    </div>
+      </button> */}
+    </motion.div>
   );
 };
 
