@@ -1,67 +1,66 @@
-import pythonLogo from '../assets/logos/python-logo.png';
-import htmlLogo from '../assets/logos/html-logo.png';
-import cssLogo from '../assets/logos/css3.png';
-import jsLogo from '../assets/logos/js-logo.png';
-import tsLogo from '../assets/logos/ts-logo.png';
-import tailwindLogo from '../assets/logos/tailwind-logo.webp';
-import './styles.scss'
+import { motion } from "framer-motion";
+
+import pythonLogo from "../assets/logos/python-logo.png";
+import htmlLogo from "../assets/logos/html-logo.png";
+import cssLogo from "../assets/logos/css3.png";
+import jsLogo from "../assets/logos/js-logo.png";
+import tsLogo from "../assets/logos/ts-logo.png";
+import tailwindLogo from "../assets/logos/tailwind-logo.webp";
+import "./styles.scss";
 
 const Skills = () => {
-    return (
-        <>
-            <h1 className="title text-center bg-transparent">Skills</h1>
-        <section className="grid grid-cols-4 md:grid-cols-6">
-            <div className="bg-sky-700 skill-box  text-center p-5 lg:p-12">
-                <img src={pythonLogo} className='object-scale-down skill-logo' />
-                
+    const cardProps = [
+        {
+            image: pythonLogo,
+            title: 'Python',
+            color: 'bg-sky-700'
+        },
+        {
+            image: htmlLogo,
+            title: 'HTML',
+            color: 'bg-orange-600'
+        },
+        {
+            image: cssLogo,
+            title: 'CSS',
+            color: 'bg-blue-700'
+        },
+        {
+            image: jsLogo,
+            title: 'Javacript',
+            color: 'bg-yellow-400'
+        },
+        {
+            image: tsLogo,
+            title: 'TypeScript',
+            color: 'bg-blue-500'
+        },
+        {
+            image: tailwindLogo,
+            title: 'Tailwind CSS',
+            color: 'bg-sky-300'
+        },
+    ]
+  return (
+    <>
+      <h1 className="title text-center bg-transparent">Skills</h1>
+      <section className="grid grid-cols-4 md:grid-cols-6">
+        {cardProps.map((data) => (
+            <motion.div className="flip-card" viewport={{once: true}} whileInView={{rotateY:'360deg', transition: {duration:1}}}>
+            <div className="flip-card-inner">
+              <div className={`flip-card-front ${data.color}`}>
+                <img src={data.image} width={200} />
+              </div>
+              <div className={`flip-card-back ${data.color}`}>
+                <h1 className="text-3xl">{data.title}</h1>
+              </div>
             </div>
-            <div className="bg-orange-600 skill-box text-center p-5 lg:p-12">
-            <img src={htmlLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-blue-700 skill-box text-center p-5 lg:p-12">
-            <img src={cssLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-yellow-400 skill-box text-center p-5 lg:p-12">
-                <img src={jsLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-blue-500 skill-box text-center p-5 lg:p-12">
-            <img src={tsLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-sky-300 skill-box text-center p-5 lg:p-12">
-            <img src={tailwindLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-sky-700 skill-box text-center p-5 lg:p-12">
-                <img src={pythonLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-orange-600 skill-box text-center p-5 lg:p-12">
-            <img src={htmlLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-blue-700 skill-box text-center p-5 lg:p-12">
-            <img src={cssLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-yellow-400 skill-box text-center p-5 lg:p-12">
-                <img src={jsLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-blue-500 skill-box text-center p-5 lg:p-12">
-            <img src={tsLogo} className='skill-logo' />
-                
-            </div>
-            <div className="bg-sky-300 skill-box text-center p-5 lg:p-12">
-            <img src={tailwindLogo} className='skill-logo' />
-                
-            </div>
-        </section>
-        </>
-    )
-}
+          </motion.div>
+        ))}
+       
+      </section>
+    </>
+  );
+};
 
 export default Skills;

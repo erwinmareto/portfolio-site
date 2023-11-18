@@ -110,23 +110,6 @@ $third-gradient: linear-gradient(to bottom, $accent-color 25%, $neutral-color 10
     padding-bottom: 0.25rem;
 }
 
-.skill-box {
-    display: flex;
-    flex-shrink: inherit;
-    align-items: center;
-    border-width: 1px;
-    border-color: white;
-    // border-radius: 10px;
-    // padding: 1em;
-}
-
-.skill-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-}
-
 
 .box {
     width: 300px;
@@ -178,12 +161,17 @@ $third-gradient: linear-gradient(to bottom, $accent-color 25%, $neutral-color 10
 
 
 .flip-card {
-    height: 300px;
-    width: 300px;
+    display: flex;
+    flex-shrink: initial;
+    align-items: center;
+    height: 225px;
+    width: 225px;
+    background-color: transparent;
     perspective: 1000px;
 }
 
 .flip-card-inner {
+    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -195,12 +183,27 @@ $third-gradient: linear-gradient(to bottom, $accent-color 25%, $neutral-color 10
     transform: rotateY(180deg);
 }
 
-.flip-card-front .flip-card-back {
+.flip-card-front, .flip-card-back {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
     width: 100%;
     height: 100%;
+    padding: 1rem;
+    backface-visibility: hidden;
+}
 
+.flip-card-front{
+    padding: 3rem;
 }
 
 .flip-card-back {
+
+    background-color: #2915b9;
+    color: white;
+
     transform: rotateY(180deg);
 }

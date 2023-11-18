@@ -12,7 +12,7 @@ const Projects = () => {
   const variants = {
     appear: {
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.2,
         delayChildren: 0.2,
         opacity: 1,
       },
