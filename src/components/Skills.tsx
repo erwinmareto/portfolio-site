@@ -27,6 +27,36 @@ const Skills = () => {
         },
         {
             image: jsLogo,
+            title: 'JavaScript',
+            color: 'bg-yellow-400'
+        },
+        {
+            image: tsLogo,
+            title: 'TypeScript',
+            color: 'bg-blue-500'
+        },
+        {
+            image: tailwindLogo,
+            title: 'Tailwind CSS',
+            color: 'bg-sky-300'
+        },
+        {
+            image: pythonLogo,
+            title: 'Python',
+            color: 'bg-sky-700'
+        },
+        {
+            image: htmlLogo,
+            title: 'HTML',
+            color: 'bg-orange-600'
+        },
+        {
+            image: cssLogo,
+            title: 'CSS',
+            color: 'bg-blue-700'
+        },
+        {
+            image: jsLogo,
             title: 'Javacript',
             color: 'bg-yellow-400'
         },

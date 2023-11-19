@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Carousel from "./components/Carousel";
+import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
@@ -24,11 +25,12 @@ function App() {
       <Header />
       <About />
       <Projects />
+      <Footer />
       {/* <Skills /> */}
       {/* <AnimatePresence>
    <Component key="dialog" />
 </AnimatePresence> */}
-<button onClick={() => show ? setShow(false) : setShow(true)}>CHANGE</button>
+{/* <button onClick={() => show ? setShow(false) : setShow(true)}>CHANGE</button> */}
     </>
   );
 }

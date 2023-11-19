@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 
-import Portrait from "../assets/france.webp";
 import Skills from "./Skills";
 import Carousel from "./Carousel";
 import "./styles.scss";
@@ -119,16 +118,7 @@ const Projects = () => {
           </article>
         </div>
 
-        <div className="flex flex-col mt-10 md:flex-row">
-          <div className="flex-col text-center m-10">
-            <p className="text-3xl mt-10">Lorem ipsum</p>
-            <p className="text-xl mt-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              sit incidunt earum asasaas
-            </p>
-          </div>
-          <img src={Portrait} alt="portrait" width={500} height={250} />
-        </div>
+        
       </div>
       <Skills />
     </section>
