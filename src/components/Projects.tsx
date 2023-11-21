@@ -37,7 +37,7 @@ const Projects = () => {
     },
   };
   return (
-    <section className="projects mx-auto py-10">
+    <section id='projects-section' className="projects mx-auto py-10">
       <div className="container">
         <motion.h1
           className="title title-bg text-6xl md:text-8xl"

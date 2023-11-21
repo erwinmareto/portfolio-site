@@ -40,7 +40,7 @@ function Footer() {
     },
   };
   return (
-    <section className="contacts">
+    <section id='contacts-section' className="contacts">
       <h1 className="title text-4xl">Connect With Me</h1>
 
       <motion.div className="flex justify-evenly" variants={variants}
@@ -61,7 +61,7 @@ function Footer() {
         width="1349"
         height="300"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        
         version="1.1"
       >
         <motion.path

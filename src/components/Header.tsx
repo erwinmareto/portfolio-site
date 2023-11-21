@@ -13,14 +13,14 @@ const Header = () => {
     const moveUp = async () => {
       await animate(scope.current, { opacity: 0 });
       await animate(scope.current, { opacity: 1 });
-      await animate(scope.current, { y: -50 }, { delay: 3 });
+      await animate(scope.current, { y: -40 }, { delay: 3 });
       await animate(scope.current, { opacity: 0 });
     };
   
     const moveDown = async () => {
       await move(target.current, { opacity: 0 });
       await move(target.current, { opacity: 1 });
-      await move(target.current, { y: 50 }, { delay: 3 });
+      await move(target.current, { y: 40 }, { delay: 3 });
       await move(target.current, { opacity: 0 });
     };
     moveUp();
@@ -39,10 +39,11 @@ const Header = () => {
         delay: 4,
       },
     },
+
   };
   const item = {
-    hidden: { opacity: 0, x: -100 },
-    slide: {
+    hidden: { opacity: 0, x: -110 },
+    show: {
       opacity: 1,
       transform: "translateX(0px)",
       transition: {
@@ -51,6 +52,16 @@ const Header = () => {
         stiffness: 1000,
       },
     },
+    slide: {
+      opacity: 1,
+      transform: "translateX(0px)",
+      transition: {
+        type: "easeIn",
+        duration: 2,
+        delay: 1,
+        stiffness: 1000,
+      }, 
+    }
   };
 
   return (
@@ -59,29 +70,36 @@ const Header = () => {
         className="py-48 text-center md:text-left"
         // variants={item}
       >
-        <motion.li variants={item} initial="hidden" animate="slide">
-          <h1 className="text-9xl font-bold head-text">Hello</h1>
+        <motion.li variants={item} initial="hidden" animate="show">
+          <h1 className="text-9xl font-['righteous'] text-[#7752FE]">Hello</h1>
         </motion.li>
-        <h1 className="text-5xl">My Name is erwin</h1>
+        <motion.h1 className="text-4xl font-['poppins']" variants={item} initial="hidden" animate="slide">I'm Erwin,</motion.h1>
+        {/* <h1>I'm A</h1> */}
         <motion.li ref={target}>
-          <p className="text-4xl head-text mt-5">Front End Web Developer</p>
+          <p className="text-4xl head-text  font-sans">A Front End Web Developer</p>
+          {/* <p className="text-4xl head-text ">And</p> */}
         </motion.li>
         <motion.h1
           variants={variants}
           initial="hidden"
           animate="show"
-          className="text-5xl"
+          className="text-4xl font-['poppins']"
         >
-          Full Stack Web Developer
+          A Full Stack Web Developer
         </motion.h1>
         <motion.li ref={scope}>
-          <p className="text-4xl mt-5">Back End Web Developer</p>
+          <p className="text-4xl  font-sans">A Back End Web Developer</p>
         </motion.li>
+        <div className="flex justify-center md:w-2/4 md:justify-between">
+          <div className="small-contact bg-red-500 m-5 hover:bg-yellow-400 md:m-0">HI</div>
+          <div className="small-contact bg-red-500 m-5 hover:bg-yellow-400 md:m-0">HI</div>
+          <div className="small-contact bg-red-500 m-5 hover:bg-yellow-400 md:m-0">HI</div>
+        </div>
       </motion.ul>
 
       <motion.img
         src={Portrait}
-        className="head-img hidden md:block"
+        className="w-2/4 hidden md:block"
         initial={{ y: 500 }}
         animate={{ y: 1 }}
         transition={{ type: "spring", damping: 10, stiffness: 20 }}

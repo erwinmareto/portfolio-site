@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-
+import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Carousel from "./components/Carousel";
@@ -21,7 +21,7 @@ function App() {
         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
         rel="stylesheet"
       />
-      {/* <Navbar /> */}
+      <Navbar />
       <Header />
       <About />
       <Projects />

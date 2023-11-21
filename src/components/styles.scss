@@ -15,9 +15,49 @@ $second-gradient: linear-gradient(to bottom, $secondary-color 25%, $accent-color
 $third-gradient: linear-gradient( $accent-color , $neutral-color , $secondary-color);
 // $gradient: linear-gradient(to right, $secondary-color, rgba(142, 143, 250, 0.80)), url('../assets/square2.png');
 
-// html {
-//     scroll-behavior: smooth;
-// }
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    top: -100px;
+    transition: top 0.3s;
+    background-color: transparent;
+    padding-top: 1rem;
+    z-index: 100;
+    // border-radius: 30px;
+    // z-index: 20;
+    // background-image: url('../assets/wave-haikei.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+}
+
+.nav-menu {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    background: $second-gradient;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.nav-item {
+    font-size: 2rem;
+    // line-height: 2.5rem;
+    background-color: $neutral-color;
+    border-radius: 30px;
+    padding-left: 0.75rem/* 12px */;
+    padding-right: 0.75rem/* 12px */;
+    margin: 0.25rem;
+}
+
+.nav-item:hover {
+    background-color: $accent-color;
+}
 
 .hero {
     display: flex;
@@ -38,14 +78,14 @@ $third-gradient: linear-gradient( $accent-color , $neutral-color , $secondary-co
     color: $secondary-color;
 }
 
-.head-img {
-    width: 50%;
+// .head-img {
+    // width: 50%;
     // height: 100%;
     // left: 2%;
     // bottom: 25%;
     // position: relative;
     // z-index: 1;
-}
+// }
 
 .title {
     font: 100% $title-text;
@@ -230,6 +270,16 @@ $third-gradient: linear-gradient( $accent-color , $neutral-color , $secondary-co
 
 .waves {
     position: absolute;
-    top: 401%;
+    top: 400%;
     z-index: 0;
+}
+
+.small-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    // background-color: grey;
+    width: 60px;
+    height: 50px;
 }

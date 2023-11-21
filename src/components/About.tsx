@@ -7,7 +7,7 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <section className="about">
+    <section className="about" id="about-section">
       <div className="flex flex-col container">
         <motion.div
           className="title title-bg"
