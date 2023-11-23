@@ -11,6 +11,10 @@ function App() {
   const [show, setShow] = useState(true);
   return (
     <>
+    <head>
+
+    <script src="https://kit.fontawesome.com/d61b2a0eed.js" crossorigin="anonymous"></script>
+    </head>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link

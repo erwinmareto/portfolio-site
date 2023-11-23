@@ -18,7 +18,7 @@ const About = () => {
           }}
         >
           <motion.h1
-            className="text-6xl md:text-8xl"
+            className="text-6xl lg:text-8xl"
             style={{
               transform: isInView ? "none" : "translateY(100px)",
               opacity: isInView ? 1 : 0,
@@ -28,15 +28,15 @@ const About = () => {
             About
           </motion.h1>
         </motion.div>
-        <article className="flex flex-wrap-reverse z-10 md:grid md:grid-cols-2 md:gap-32" ref={ref}>
+        <article className="flex flex-wrap-reverse z-10 lg:grid lg:grid-cols-2 lg:gap-32" ref={ref}>
           <motion.div
-            className="box absolute"
+            className="box"
             viewport={{ once: true, amount: 0.8 }}
             whileInView={{ rotate: 90 }}
             transition={{ type: "inertia", velocity: 600 }}
           />
           <motion.p
-            className="text-xl mt-10 body-text"
+            className="text-l text-left body-text mt-10 md:text-xl"
             style={{
               transform: isInView ? "none" : "translateX(-200px)",
               opacity: isInView ? 1 : 0,

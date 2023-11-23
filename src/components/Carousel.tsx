@@ -72,13 +72,14 @@ const Carousel = () => {
       onClick={() => setIndex((index) => checkIndex((index += 1)))}
 
     >
+      <motion.img src={images[index]} className="static carousel-img-1 flex lg:hidden" />
       {/* <button onClick={() => setIndex((index) => checkIndex((index -= 1)))}>BACK</button> */}
       <AnimatePresence>
         { index <= 0 && (
           <motion.img
             src={first}
             width={500}
-            className={classes[index]}
+            className={`${classes[index]} hidden lg:flex`}
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{ x: -300, opacity: 0 }}
@@ -91,7 +92,7 @@ const Carousel = () => {
           <motion.img
             src={sec}
             width={500}
-            className={`${classes.at(index - 1)} ${index === 0 && 'relative right-0'}`}
+            className={`${classes.at(index - 1)} hidden lg:flex ${index === 0 && 'relative right-0'}`}
             variants={moveOne}
             initial={{opacity: 0}}
             exit={{ x: -300, opacity: 0 }}
@@ -103,7 +104,7 @@ const Carousel = () => {
       { (index <= 2) && <motion.img
         src={third}
         width={500}
-        className={`${classes.at(index - 2)} ${index === 1 && 'relative right-0'}`}
+        className={`${classes.at(index - 2)} hidden lg:flex ${index === 1 && 'relative right-0'}`}
         variants={moveTwo}
         initial={{opacity: 0}}
         exit={{ x: -300, opacity: 0 }}
@@ -115,7 +116,7 @@ const Carousel = () => {
       <motion.img
         src={fourth}
         width={500}
-        className={`${classes.at(index - 3)} ${'relative right-0'}`}
+        className={`${classes.at(index - 3)} hidden lg:flex ${'relative right-0'}`}
         variants={moveThree}
         initial={{opacity: 0}}
         animate='move'

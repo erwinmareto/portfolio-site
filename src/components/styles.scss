@@ -24,7 +24,7 @@ nav {
     justify-content: flex-end;
     width: 100%;
     position: fixed;
-    top: -100px;
+    // top: -100px;
     transition: top 0.3s;
     background-color: transparent;
     padding-top: 1rem;
@@ -67,9 +67,9 @@ nav {
     // padding-top: 12rem/* 192px */;
     // padding-bottom: 12rem/* 192px */;
     justify-content: space-between;
-    background-image: $first-gradient;
+    background-image: url('../assets/stacked-waves.png');
     background-position: right bottom;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -152,6 +152,7 @@ nav {
 
 
 .box {
+    position: absolute;
     width: 300px;
     height: 300px;
     border-radius: 20%;
@@ -264,6 +265,7 @@ nav {
     width: 100px;
     height: 100px;
     background-color: $primary-color;
+    // color: $neutral-color;
     z-index: 1;
     // text-align: center;
 }
@@ -282,4 +284,44 @@ nav {
     // background-color: grey;
     width: 60px;
     height: 50px;
+    background-color: $neutral-color;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu{
+        width: 100%;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .nav-item {
+    font-size: 1.5rem;
+    }
+
+    // .hero{
+
+    // }
+    .flip-card{
+        width: 90px;
+        height: 90px;
+        // overflow-x: hidden
+        // padding: 1.5rem;
+    }
+
+    .flip-card-front{
+        padding: 1rem;
+    }
+
+    .icon{
+        width: 75px;
+        height: 75px;
+        padding: 1rem;
+    }
+
+    .box{
+        width: 200px;
+        height: 200px;
+        top: 140%;
+        // right: 1%;
+    }
 }
