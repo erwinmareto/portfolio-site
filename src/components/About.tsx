@@ -1,11 +1,13 @@
-import Portrait from "../assets/Group(1).png";
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
+
+import Portrait from "../assets/profile.png";
 import "./styles.scss";
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  
   return (
     <section className="about" id="about-section">
       <div className="flex flex-col container">
@@ -36,7 +38,7 @@ const About = () => {
             transition={{ type: "inertia", velocity: 600 }}
           />
           <motion.p
-            className="text-l text-left body-text mt-10 md:text-xl"
+            className="text-l text-left mt-10 md:text-xl"
             style={{
               transform: isInView ? "none" : "translateX(-200px)",
               opacity: isInView ? 1 : 0,
@@ -52,21 +54,10 @@ const About = () => {
             inventore quae illum beatae ipsum voluptatibus delectus, voluptatum
             maxime.
           </motion.p>
-          {/* <p className='text-xl mt-5'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolorum
-          eaque voluptatibus architecto, excepturi similique reiciendis! Libero
-          eum aliquam molestias dolore dignissimos nesciunt, error itaque in
-          recusandae aut tempore fugit? Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Unde natus delectus id ab consequatur! Quisquam
-          neque velit, corrupti harum dolorum, animi inventore quae illum beatae
-          ipsum voluptatibus delectus, voluptatum maxime.
-        </p> */}
 
           <motion.img
             src={Portrait}
-            alt="portrait"
-            width={400}
-            height={250}
+            alt="Portrait"
             viewport={{ once: true, amount: 0.8 }}
             style={{
               transform: isInView ? "none" : "translateY(100px)",

@@ -46,12 +46,7 @@ const Navbar = () => {
         >
           Contacts
         </motion.a>
-
-        {/* <h1 className="text-4xl bg-slate-100 rounded-3xl px-3 py-1 m-1">About</h1> */}
       </div>
-      {/* <h1 className="float-right">gyhghg</h1> */}
-      {/* <h1>Name</h1>
-            <h1>Login</h1> */}
     </nav>
   );
 };

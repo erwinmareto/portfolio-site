@@ -26,7 +26,7 @@ const Carousel = () => {
     return number - images.length;
   };
 
-  const variants = {
+  const starter = {
     move: {
       x: 0,
       y: 0,
@@ -67,13 +67,12 @@ const Carousel = () => {
   return (
     <motion.div
       className=" flex justify-center"
-      variants={variants}
+      variants={starter}
       animate="move"
       onClick={() => setIndex((index) => checkIndex((index += 1)))}
 
     >
       <motion.img src={images[index]} className="static carousel-img-1 flex lg:hidden" />
-      {/* <button onClick={() => setIndex((index) => checkIndex((index -= 1)))}>BACK</button> */}
       <AnimatePresence>
         { index <= 0 && (
           <motion.img
@@ -124,9 +123,6 @@ const Carousel = () => {
       />
         }
       </AnimatePresence>
-      {/* <button onClick={() => setIndex((index) => checkIndex((index += 1)))}>
-        CLICK
-      </button> */}
     </motion.div>
   );
 };

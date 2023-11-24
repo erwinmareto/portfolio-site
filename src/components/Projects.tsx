@@ -7,8 +7,16 @@ import "./styles.scss";
 
 const Projects = () => {
   const ref = useRef(null);
+  const wihireStack = [
+    "ReactJS",
+    "NextJS",
+    "TailwindCSS",
+    "ExpressJS",
+    "PrismaORM",
+    "PostgreSQL"
+  ];
 
-  const variants = {
+  const starter = {
     appear: {
       transition: {
         staggerChildren: 0.2,
@@ -37,9 +45,8 @@ const Projects = () => {
     },
   };
   return (
-    <section id='projects-section' className="projects mx-auto py-10">
+    <section id="projects-section" className="projects mx-auto py-10">
       <div className="container">
-        {/* <div className="title title-bg"> */}
 
         <motion.h1
           className="title title-bg text-6xl lg:text-8xl"
@@ -48,22 +55,14 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{
             type: "easeIn",
-            duration: 2
+            duration: 2,
           }}
         >
           Projects
         </motion.h1>
-        {/* </div> */}
 
         <div className="flex flex-col my-10">
           <div className="grid">
-            {/* <img
-              src={Portrait}
-              alt="portrait"
-              width={500}
-              height={250}
-              className="project-img justify-self-center cool-border"
-            /> */}
             <Carousel />
           </div>
           <article className="flex-col text-center" ref={ref}>
@@ -77,39 +76,20 @@ const Projects = () => {
               Lorem ipsum
             </motion.p>
             <motion.ul
-              variants={variants}
+              variants={starter}
               initial="hidden"
               whileInView="appear"
               viewport={{ once: true, amount: 0.8 }}
               className="badge-list"
             >
-              <motion.li className="badge" variants={items}>
-                React
-              </motion.li>
-              <motion.li className="badge" variants={items}>
-                React
-              </motion.li>
-              <motion.li className="badge" variants={items}>
-                React
-              </motion.li>
-              <motion.li className="badge" variants={items}>
-                React
-              </motion.li>
-              <motion.li className="badge" variants={items}>
-                React
-              </motion.li>
-              <motion.li className="badge" variants={items}>
-                React
-              </motion.li>
-              <motion.li className="badge" variants={items}>
-                React
-              </motion.li>
-              <motion.li className="badge" variants={items}>
-                React
-              </motion.li>
+              {wihireStack.map((title) => (
+                <motion.li className="badge" variants={items}>
+                  {title}
+                </motion.li>
+              ))}
             </motion.ul>
             <motion.p
-              className="text-2xl mt-5"
+              className="text-2xl font-['poppins'] mt-5"
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -120,8 +100,6 @@ const Projects = () => {
             </motion.p>
           </article>
         </div>
-
-        
       </div>
       <Skills />
     </section>

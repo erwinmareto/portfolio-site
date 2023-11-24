@@ -1,377 +1,312 @@
-$title-text: 'Righteous', sans-serif;
-$read-text: 'Poppins', sans-serif;
-
+$title-text: "Righteous", sans-serif;
+$read-text: "Poppins", sans-serif;
 
 $primary-color: #190482;
-$secondary-color: #7752FE;
-$accent-color: #8E8FFA;
-$neutral-color: #C2D9FF;
-$hero-image:'./assets/Portrait.jpg';
-$first-gradient: url('../assets/stacked-waves.png');
-// $second-gradient : url('../assets/stacked-waves-haikei.png');
-// $second-gradient : url('../assets//layered-steps-haikei.png');
-// $first-gradient: linear-gradient(to bottom, $primary-color 50%, $secondary-color 100%), url('../assets/square2.png');
-$second-gradient: linear-gradient(to bottom, $secondary-color 25%, $accent-color 100%);
-$third-gradient: linear-gradient( $accent-color , $neutral-color , $secondary-color);
-// $gradient: linear-gradient(to right, $secondary-color, rgba(142, 143, 250, 0.80)), url('../assets/square2.png');
+$secondary-color: #7752fe;
+$accent-color: #8e8ffa;
+$neutral-color: #c2d9ff;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+p {
+  font: 100% $read-text;
 }
 
 nav {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    position: fixed;
-    // top: -100px;
-    transition: top 0.3s;
-    background-color: transparent;
-    padding-top: 1rem;
-    z-index: 100;
-    // border-radius: 30px;
-    // z-index: 20;
-    // background-image: url('../assets/wave-haikei.png');
-    // background-repeat: no-repeat;
-    // background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: fixed;
+  transition: top 0.3s;
+  background-color: transparent;
+  padding-top: 1rem;
+  z-index: 999;
 }
 
 .nav-menu {
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    background: $second-gradient;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  background: linear-gradient(
+    to bottom,
+    $secondary-color 25%,
+    $accent-color 100%
+  );
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .nav-item {
-    font-size: 2rem;
-    // line-height: 2.5rem;
-    background-color: $neutral-color;
-    border-radius: 30px;
-    padding-left: 0.75rem/* 12px */;
-    padding-right: 0.75rem/* 12px */;
-    margin: 0.25rem;
+  font-size: 2rem;
+  background-color: $neutral-color;
+  border-radius: 30px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0.25rem;
 }
 
 .nav-item:hover {
-    background-color: $accent-color;
+  background-color: #cff9ff;
 }
 
 .hero {
-    display: flex;
-    flex-wrap: wrap;
-    // padding-left: 5rem;
-    // padding-right: 5rem;
-    // padding-top: 12rem/* 192px */;
-    // padding-bottom: 12rem/* 192px */;
-    justify-content: space-between;
-    background-image: url('../assets/stacked-waves.png');
-    background-position: right bottom;
-    // background-repeat: no-repeat;
-    background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url("../assets/stacked-waves.png");
+  background-position: right bottom;
+  background-size: cover;
+  z-index: 10;
 }
 
 .head-text {
-    font: 100% $title-text;
-    color: $secondary-color;
+  font: 100% $title-text;
+  color: $secondary-color;
 }
 
-// .head-img {
-    // width: 50%;
-    // height: 100%;
-    // left: 2%;
-    // bottom: 25%;
-    // position: relative;
-    // z-index: 1;
-// }
-
 .title {
-    font: 100% $title-text;
-    font-size: 5rem;
-    color: $primary-color;
+  font: 100% $title-text;
+  font-size: 5rem;
+  color: $primary-color;
 }
 
 .title-bg {
-    background-color: $neutral-color;
-    position: relative;
-    right: 10%;
-    padding-left: 1em;
-    border-radius: 30px;
-    z-index: 10;
-}
-
-.body-text {
-    font: 100% $read-text;
-    // max-width: 50%;
+  background-color: $neutral-color;
+  position: relative;
+  right: 10%;
+  padding-left: 1em;
+  border-radius: 30px;
+  z-index: 100;
 }
 
 .about {
-    background-image: $second-gradient;
-    display: flex;
-    flex-direction: column;
-    padding-top: 2.5rem;
+  background-image: linear-gradient(
+    to bottom,
+    $secondary-color 25%,
+    $accent-color 100%
+  );
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
 }
 
 .projects {
-    // background-color: $accent-color;
-    background-image: $third-gradient;
+  background-image: linear-gradient(
+    $accent-color,
+    $neutral-color,
+    $secondary-color
+  );
 }
 
 .project-img {
-    width: 75%;
-    border-radius: 30px;
-    border-style: inset;
-    border-width: 7px;
-    border-color: $secondary-color;
+  width: 75%;
+  border-radius: 30px;
+  border-style: inset;
+  border-width: 7px;
+  border-color: $secondary-color;
 }
 
 .project-img:hover {
-    width: 100%;
-    border-style: outset;
+  width: 100%;
+  border-style: outset;
 }
 
 .badge-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .badge {
-    font: 100% $read-text;
-    color: white;
-    border-radius: 30px;
-    background-color: $primary-color;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+  font: 100% $read-text;
+  color: white;
+  border-radius: 30px;
+  background-color: $primary-color;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
-
 
 .box {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 20%;
-    background: $neutral-color;
-    z-index: -1;
-    top: 145%;
-    right: 80%
-  }
-
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 20%;
+  background: $neutral-color;
+  z-index: -1;
+  top: 145%;
+  right: 80%;
+}
 
 .carousel-img-1 {
-    position: absolute;
-    border-radius: 30px;
-    border-width: 3px;
-    border-color: $primary-color;
-    right: 34%;
-    
-    z-index: 10;
+  position: absolute;
+  border-radius: 30px;
+  border-width: 3px;
+  border-color: $primary-color;
+  right: 34%;
+  z-index: 10;
 }
 .carousel-img-2 {
-    position: absolute;
-    border-radius: 30px;
-    border-width: 3px;
-    border-color: $primary-color;
-    right: 34%;
-    
-    z-index: 20;
+  position: absolute;
+  border-radius: 30px;
+  border-width: 3px;
+  border-color: $primary-color;
+  right: 34%;
+  z-index: 20;
 }
 .carousel-img-3 {
-    position: absolute;
-    border-radius: 30px;
-    border-width: 3px;
-    border-color: $primary-color;
-    right: 34%;
-    
-    z-index: 30;
+  position: absolute;
+  border-radius: 30px;
+  border-width: 3px;
+  border-color: $primary-color;
+  right: 34%;
+  z-index: 30;
 }
 .stopper {
-    position: absolute;
-    border-radius: 30px;
-    border-width: 3px;
-    border-color: $primary-color;
-    right: 34%;
-    
-    z-index: 50;
+  position: absolute;
+  border-radius: 30px;
+  border-width: 3px;
+  border-color: $primary-color;
+  right: 34%;
+  z-index: 50;
 }
 
-
 .flip-card {
-    display: flex;
-    flex-shrink: initial;
-    align-items: center;
-    height: 225px;
-    width: 225px;
-    background-color: transparent;
-    perspective: 1000px;
+  display: flex;
+  flex-shrink: initial;
+  align-items: center;
+  height: 225px;
+  width: 225px;
+  background-color: transparent;
+  perspective: 1000px;
 }
 
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    backface-visibility: hidden;
+.flip-card-front,
+.flip-card-back {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  backface-visibility: hidden;
 }
 
-.flip-card-front{
-    padding: 3rem;
+.flip-card-front {
+  padding: 3rem;
 }
 
 .flip-card-back {
-
-    background-color: #2915b9;
-    color: white;
-
-    transform: rotateY(180deg);
+  background-color: #2915b9;
+  color: white;
+  transform: rotateY(180deg);
 }
 
 .contacts {
-    background-color: #7752FE;
-    text-align: center;
+  background-color: #7752fe;
+  text-align: center;
 }
 
 .icon {
-    // margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
-    margin-bottom: 4rem;
-    border-radius: 20px;
-    width: 100px;
-    height: 100px;
-    background-color: $primary-color;
-    // color: $neutral-color;
-    z-index: 1;
-    // text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  background-color: $primary-color;
+  color: $neutral-color;
+  z-index: 1;
 }
 
 .waves {
-    position: absolute;
-    width: 100%;
-    // height: 100%;
-    top: 399%;
-    // bottom: 10%;
-    z-index: 0;
+  position: absolute;
+  width: 100%;
+  top: 410%;
+  z-index: 0;
 }
 
 .small-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    // background-color: grey;
-    width: 60px;
-    height: 50px;
-    background-color: $neutral-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 2rem;
+  width: 60px;
+  height: 50px;
+  background-color: $neutral-color;
 }
 
 @media only screen and (max-width: 992px) {
-    .nav-menu{
-        width: 100%;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-    }
+  .nav-menu {
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
 
-    .nav-item {
+  .nav-item {
     font-size: 1.5rem;
-    }
+  }
 
-    // .hero{
-    //     padding-top: 5rem;
-    //     padding-bottom: 5rem;
-    // }
-    .flip-card{
-        width: 160px;
-        height: 160px;
-        // overflow-x: hidden
-        // padding: 1.5rem;
-    }
+  .flip-card {
+    width: 160px;
+    height: 160px;
+  }
 
-    .flip-card-front{
-        padding: 1.5rem;
-    }
+  .flip-card-front {
+    padding: 1.5rem;
+  }
 
-    .icon{
-        width: 75px;
-        height: 75px;
-        padding: 1rem;
-    }
+  .icon {
+    width: 75px;
+    height: 75px;
+    padding: 1rem;
+  }
 
-    .box{
-        width: 200px;
-        height: 200px;
-        top: 115%;
-        // right: 1%;
-    }
+  .box {
+    width: 200px;
+    height: 200px;
+    top: 125%;
+    right: 10%;
+  }
 
-    .waves {
-        position: relative;
-        // top: 260%;
-        height: 100%;
-    }
+  .waves {
+    position: relative;
+    height: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    // .nav-menu{
-    //     width: 100%;
-    //     border-top-right-radius: 30px;
-    //     border-bottom-right-radius: 30px;
-    // }
+  .flip-card {
+    width: 95px;
+    height: 95px;
+  }
 
-    // .nav-item {
-    // font-size: 1.5rem;
-    // }
-
-    // // .hero{
-
-    // // }
-    .flip-card{
-        width: 95px;
-        height: 95px;
-        // overflow-x: hidden
-        // padding: 1.5rem;
-    }
-
-    // .flip-card-front{
-    //     padding: 1rem;
-    // }
-
-    // .icon{
-    //     width: 75px;
-    //     height: 75px;
-    //     padding: 1rem;
-    // }
-
-    .box{
-        width: 200px;
-        height: 200px;
-        top: 145%;
-        // right: 1%;
-    }
+  .box {
+    width: 200px;
+    height: 200px;
+    top: 140%;
+  }
 }

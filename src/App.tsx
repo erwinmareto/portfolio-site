@@ -2,21 +2,20 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
-import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
 
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
 function App() {
-  const [show, setShow] = useState(true);
   return (
     <>
-    <head>
-
-    <script src="https://kit.fontawesome.com/d61b2a0eed.js" crossorigin="anonymous"></script>
-    </head>
+      <head>
+        <script src="https://kit.fontawesome.com/d61b2a0eed.js"></script>
+      </head>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
         href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
         rel="stylesheet"
@@ -30,13 +29,10 @@ function App() {
       <About />
       <Projects />
       <Footer />
-      {/* <Skills /> */}
-      {/* <AnimatePresence>
-   <Component key="dialog" />
-</AnimatePresence> */}
-{/* <button onClick={() => show ? setShow(false) : setShow(true)}>CHANGE</button> */}
     </>
   );
 }
 
 export default App;
+// Global import for font awesome
+library.add(fab, fas, far);
