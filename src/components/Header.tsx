@@ -92,7 +92,7 @@ const Header = () => {
   return (
     <section className="hero md:pl-20 md:pr-20">
       <motion.ul
-        className="py-24 text-center md:text-left md:first-letter:py-48"
+        className="py-24 text-center md:text-left md:first-letter md:py-48"
         // variants={items}
       >
         <motion.li variants={items} initial="hidden" animate="show">

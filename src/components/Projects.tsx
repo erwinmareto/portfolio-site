@@ -39,18 +39,21 @@ const Projects = () => {
   return (
     <section id='projects-section' className="projects mx-auto py-10">
       <div className="container">
+        {/* <div className="title title-bg"> */}
+
         <motion.h1
-          className="title title-bg text-6xl md:text-8xl"
-          initial={{ x: -300, opacity: 0 }}
+          className="title title-bg text-6xl lg:text-8xl"
+          initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{
-            type: "inertia",
-            velocity: 350,
+            type: "easeIn",
+            duration: 2
           }}
         >
           Projects
         </motion.h1>
+        {/* </div> */}
 
         <div className="flex flex-col my-10">
           <div className="grid">

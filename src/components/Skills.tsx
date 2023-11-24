@@ -73,7 +73,7 @@ const Skills = () => {
     ]
   return (
     <>
-      <h1 className="title text-center bg-transparent">Skills</h1>
+      <h1 className="title text-6xl text-center bg-transparent lg:text-8xl">Skills</h1>
       
       <section className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
         {cardProps.map((data) => (

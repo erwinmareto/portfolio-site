@@ -58,7 +58,7 @@ function Footer() {
         variants={variants}
         initial="hidden"
         whileInView="appear"
-        className="waves hidden lg:flex"
+        className="waves"
         id="visual"
         viewBox="0 0 1349 300"
         width="1349"
