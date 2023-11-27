@@ -48,20 +48,18 @@ const Projects = () => {
     <section id="projects-section" className="projects mx-auto py-10">
       <div className="flex justify-center">
         <div className="container">
-          <div className="title title-bg">
-            <motion.h1
-              className="text-6xl lg:text-8xl"
-              initial={{ x: -200, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                type: "easeIn",
-                duration: 2,
-              }}
-            >
-              Projects
-            </motion.h1>
-          </div>
+          <motion.div
+            className="title title-bg"
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              type: "easeIn",
+              duration: 2,
+            }}
+          >
+            <h1 className="text-6xl lg:text-8xl">Projects</h1>
+          </motion.div>
 
           <div className="flex flex-col my-10">
             <div className="grid">

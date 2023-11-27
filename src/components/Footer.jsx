@@ -70,12 +70,8 @@ function Footer() {
         >
           <FontAwesomeIcon icon="fa-solid fa-envelope" />
         </motion.a>
-        {/* <motion.div className="icon" variants={items}>P</motion.div>
-        <motion.div className="icon" variants={items}>P</motion.div>
-        <motion.div className="icon" variants={items}>P</motion.div> */}
       </motion.div>
       <motion.svg
-        // initial={{ opacity: 0 }}
         variants={variants}
         initial="hidden"
         whileInView="appear"
