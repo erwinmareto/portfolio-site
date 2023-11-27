@@ -5,10 +5,11 @@ import fourth from "../assets/projects/wihire/four_pic.png";
 import "./styles.scss";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
 const Carousel = () => {
   const [index, setIndex] = useState(0);
   const images = [first, sec, third, fourth];
-  const checkIndex = (number: number) => {
+  const checkIndex = (number) => {
     if (number === images.length || number < 0) {
       return 0;
     }
