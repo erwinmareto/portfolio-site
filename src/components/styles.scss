@@ -210,10 +210,8 @@ nav {
 }
 
 .waves {
-  position: absolute;
-  width: 100%;
-  top: 420%;
-  z-index: 0;
+  position: relative;
+  height: 100%;
 }
 
 .small-contact {
@@ -264,10 +262,10 @@ nav {
     right: 10%;
   }
 
-  .waves {
-    position: relative;
-    height: 100%;
-  }
+  // .waves {
+  //   position: relative;
+  //   height: 100%;
+  // }
 }
 
 @media only screen and (max-width: 600px) {

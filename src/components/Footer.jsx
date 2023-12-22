@@ -64,7 +64,7 @@ function Footer() {
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
           variants={items}
-          href="https://github.com/erwinmareto"
+          href = "mailto:erwinmaretow@gmail.com"
           target="_blank"
           className="icon"
         >

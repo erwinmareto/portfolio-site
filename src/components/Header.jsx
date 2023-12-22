@@ -150,8 +150,7 @@ const Header = () => {
             variants={items}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
-            href="https://github.com/erwinmareto"
-            target="_blank"
+            href = "mailto:erwinmaretow@gmail.com"
           >
             <FontAwesomeIcon icon="fa-solid fa-envelope" />
           </motion.a>

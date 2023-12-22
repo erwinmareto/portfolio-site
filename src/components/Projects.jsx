@@ -73,7 +73,7 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ type: "easeIn" }}
               >
-                Lorem ipsum
+                WiHire
               </motion.p>
               <motion.ul
                 variants={starter}
@@ -95,8 +95,7 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ type: "easeIn" }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sit incidunt earum asasaas
+                Job portal application that facillitates effortless connections between companies and job seekers with detailed information.
               </motion.p>
             </article>
           </div>

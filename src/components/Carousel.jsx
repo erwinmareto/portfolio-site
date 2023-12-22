@@ -1,14 +1,14 @@
-import first from "../assets/projects/wihire/first_pic.png";
-import sec from "../assets/projects/wihire/sec_pic.png";
-import third from "../assets/projects/wihire/third_pic.png";
-import fourth from "../assets/projects/wihire/four_pic.png";
+import homePage from "../assets/projects/wihire/home_page.png";
+import jobPost from "../assets/projects/wihire/job_post.png";
+import applicationPage from "../assets/projects/wihire/application.png";
+import profilePage from "../assets/projects/wihire/profile.png";
 import "./styles.scss";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Carousel = () => {
   const [index, setIndex] = useState(0);
-  const images = [first, sec, third, fourth];
+  const images = [homePage, jobPost, applicationPage, profilePage];
   const checkIndex = (number) => {
     if (number === images.length || number < 0) {
       return 0;
@@ -52,7 +52,7 @@ const Carousel = () => {
       <AnimatePresence>
         {index === 0 && (
           <motion.img
-            src={first}
+            src={images[index]}
             width={500}
             className="project-img"
             variants={moveOne}
@@ -67,7 +67,7 @@ const Carousel = () => {
       <AnimatePresence>
         {index === 1 && (
           <motion.img
-            src={sec}
+            src={images[index]}
             width={500}
             className="project-img"
             variants={moveOne}
@@ -82,7 +82,7 @@ const Carousel = () => {
       <AnimatePresence>
         {index === 2 && (
           <motion.img
-            src={third}
+            src={images[index]}
             width={500}
             className="project-img"
             variants={moveOne}
@@ -97,7 +97,7 @@ const Carousel = () => {
       <AnimatePresence>
         {index === 3 && (
           <motion.img
-            src={fourth}
+            src={images[index]}
             width={500}
             className="project-img"
             variants={moveOne}
